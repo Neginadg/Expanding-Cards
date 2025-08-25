@@ -5,13 +5,21 @@
 }
 
 body {
-  font-family: 'Roboto', 'sans-serif';
+  font-family: '', 'sans-serif';
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background: #0d8569;
+  background: #00d9d5;
+  background: #00d9d5;
+  background: radial-gradient(
+    circle,
+    rgba(0, 217, 213, 1) 0%,
+    rgba(4, 54, 84, 1) 87%
+  );
 }
 
 .container {
@@ -19,7 +27,7 @@ body {
   width: 90vw;
 }
 .panel {
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
@@ -29,7 +37,7 @@ body {
   flex: 0.5;
   margin: 10px;
   position: relative;
-  transition: flex 0.7s ease-in;
+  -webkit-transition: all 700ms ease-in;
 }
 .panel h3 {
   font-size: 24px;
@@ -44,6 +52,7 @@ body {
 }
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 @media (max-width: 480px) {
   .container {
